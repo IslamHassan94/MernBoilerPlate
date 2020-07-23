@@ -1,11 +1,12 @@
-const mongoose = requrie("mongoose");
+const mongoose = require('mongoose');
+
 const userSchema = mongoose.Schema({
     name: {
         type: String,
         maxLength: 50
     },
     email: {
-        type: true,
+        type: String,
         trim: true,
         unique: 1
     },
@@ -22,7 +23,7 @@ const userSchema = mongoose.Schema({
         default: 0
     },
     token: {
-        type: String
+        type: String,
     },
     tokenExp: {
         type: Number
